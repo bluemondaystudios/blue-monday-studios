@@ -181,7 +181,7 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <span className="dot" />
-                DIGITAL INFRASTRUCTURE FOR SMALL BUSINESS
+                DIGITAL INFRASTRUCTURE FOR SMALL BUSINESSES
               </motion.div>
 
               <motion.h1
@@ -278,7 +278,7 @@ function App() {
 
         <section className="services section" id="services">
           <SectionHeading eyebrow="WHAT WE BUILD" title="Your digital business infrastructure.">
-            We bring the essential digital layers of a modern small business together
+            We bring the essential digital layers of modern small businesses together
             so they work as one system.
           </SectionHeading>
 
@@ -377,7 +377,7 @@ function App() {
               </p>
               <div className="future-mark">
                 <Sparkles size={22} />
-                <span>BUILT FOR<br />SMALL BUSINESS</span>
+                <span>BUILT FOR<br />SMALL BUSINESSES</span>
               </div>
             </div>
           </div>
@@ -394,7 +394,7 @@ function App() {
             <div className="about-card">
               <div className="about-card-number">BM<span>®</span></div>
               <p>
-                Built for small business.<br />
+                Built for small businesses.<br />
                 Designed for the real world.
               </p>
               <div className="about-line" />
@@ -426,7 +426,7 @@ function App() {
       <footer className="footer">
         <div className="footer-brand">
           <span className="brand-mark">BM</span>
-          <div><strong>BLUE MONDAY STUDIOS</strong><small>Digital infrastructure for small business.</small></div>
+          <div><strong>BLUE MONDAY STUDIOS</strong><small>Digital infrastructure for small businesses.</small></div>
         </div>
         <div className="footer-links">
           <a href="#services">Services</a>
