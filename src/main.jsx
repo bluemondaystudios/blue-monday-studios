@@ -200,7 +200,7 @@ function App() {
                 transition={{ duration: 0.65, delay: 0.16 }}
               >
                 Blue Monday Studios builds the digital infrastructure behind small
-                businesses — from Google and WhatsApp to professional email,
+                businesses. From Google and WhatsApp to professional email,
                 websites and visual identity.
               </motion.p>
 
@@ -377,7 +377,7 @@ function App() {
               </p>
               <div className="future-mark">
                 <Sparkles size={22} />
-                <span>BUILT FOR<br />SMALL BUSINESS</span>
+                <span>BUILT FOR<br />SMALL BUSINESSES</span>
               </div>
             </div>
           </div>
