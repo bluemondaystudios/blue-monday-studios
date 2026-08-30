@@ -266,13 +266,31 @@ function App() {
 
         <section className="statement">
           <div className="statement-inner">
-            <span className="eyebrow">THE PROBLEM</span>
-            <h2>Your customers are already digital. <span>Is your business?</span></h2>
-            <p>
-              A business can have a great product and still lose opportunities because
-              customers cannot find it, trust it, contact it or understand what it offers.
-              We connect those missing pieces.
-            </p>
+            <div className="statement-copy">
+              <span className="eyebrow">THE PROBLEM</span>
+              <h2>Your customers are already digital. <span>Is your business?</span></h2>
+              <p>
+                A business can have a great product and still lose opportunities because
+                customers cannot find it, trust it, contact it or understand what it offers.
+                We connect those missing pieces.
+              </p>
+            </div>
+
+            <motion.div
+              className="stat-card"
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5 }}
+            >
+              <span className="stat-label">DID YOU KNOW?</span>
+              <span className="stat-number">25%</span>
+              <p>
+                Only about 25% of small businesses in South Africa have a properly
+                set-up digital infrastructure.
+              </p>
+              <span className="stat-source">Source: FNB App Academy</span>
+            </motion.div>
           </div>
         </section>
 
