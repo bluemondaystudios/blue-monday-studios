@@ -349,12 +349,13 @@ a { color: inherit; text-decoration: none; }
 .healthcare-product { background: var(--navy); color: white; padding: 40px 36px; }
 .product-top { display: flex; align-items: center; justify-content: space-between; }
 .product-top svg { color: var(--yellow); }
-.healthcare-product h3 { font: 700 34px "Space Grotesk", sans-serif; letter-spacing: -.04em; margin: 16px 0 14px; }
+.healthcare-product h3 { font: 700 34px "Space Grotesk", sans-serif; letter-spacing: -.04em; margin: 16px 0 6px; }
+.healthcare-product p.product-tagline { color: var(--yellow); font: 600 15px "Space Grotesk", sans-serif; letter-spacing: -.01em; margin: 0 0 14px; }
 .healthcare-product > p { color: #B9C7DA; line-height: 1.65; font-size: 15px; margin: 0 0 26px; }
 .product-items { display: grid; gap: 12px; margin-bottom: 30px; }
 .product-items div { display: flex; align-items: center; gap: 9px; font-size: 13px; }
 .product-items svg { color: var(--yellow); flex: 0 0 auto; }
-.healthcare-product .button { margin-top: 4px; }
+.healthcare-cta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .product-note { display: block; margin-top: 18px; color: #7890B1; font-size: 11px; letter-spacing: .02em; }
 
 .future { background: var(--yellow); color: var(--navy); padding: 115px 24px; }

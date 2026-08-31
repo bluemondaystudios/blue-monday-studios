@@ -98,8 +98,8 @@ const practicePains = [
   },
   {
     number: "05",
-    title: "One person holds it together",
-    text: "The bookings, the notes, the billing — if your practice manager is off sick, so is the practice's memory."
+    title: "Nobody remembers who saw who",
+    text: "A regular patient walks in, and whoever's on the desk that day has no idea which doctor usually sees them or why."
   }
 ];
 
@@ -108,7 +108,7 @@ const valuemedicPoints = [
   "WhatsApp reminders and confirmations sent without reception lifting a phone",
   "Medical aid and benefit checks run ahead of the appointment",
   "After-hours messages logged and answered, not lost overnight",
-  "Patient records any staff member can find in seconds, not a filing cabinet"
+  "Every patient linked to their usual doctor, referrals and visit history — not just a name on a list"
 ];
 
 function SectionHeading({ eyebrow, title, children, light = false }) {
@@ -427,7 +427,8 @@ function App() {
           <SectionHeading eyebrow="FOR SMALL HEALTHCARE PRACTICES" title="Most practices don't lose patients in the consulting room. They lose them at reception.">
             GPs, dentists, physios and small clinics are run by two or three people juggling
             bookings, medical aid queries and patient records on top of actual patient care.
-            ValueMedic is the system we're building to take that load off.
+            ValueMedic is the CRM we're building for practices — one built around how patients,
+            doctors and staff actually relate to each other, not just a list of time slots.
           </SectionHeading>
 
           <div className="healthcare-grid">
@@ -456,18 +457,32 @@ function App() {
                 <Stethoscope size={22} strokeWidth={1.8} />
               </div>
               <h3>ValueMedic</h3>
+              <p className="product-tagline">The CRM built around how a practice actually runs.</p>
               <p>
-                ValueMedic takes on the parts of running a practice that don't need a person
-                watching them, so reception can watch the people actually in the waiting room.
+                Not a booking app with a patient list bolted on — ValueMedic follows the
+                relationships underneath a practice: which doctor a patient usually sees,
+                where a referral came from, who's covering reception when someone hands off
+                mid-shift. It takes on the parts of the day that don't need a person watching
+                them, so reception can watch the people actually in the waiting room.
               </p>
               <div className="product-items">
                 {valuemedicPoints.map((point) => (
                   <div key={point}><Check size={16} /> {point}</div>
                 ))}
               </div>
-              <a className="button button-yellow" href="#contact">
-                Ask about ValueMedic <ArrowUpRight size={17} />
-              </a>
+              <div className="healthcare-cta">
+                <a className="button button-yellow" href="#contact">
+                  Ask about ValueMedic <ArrowUpRight size={17} />
+                </a>
+                <a
+                  className="text-link"
+                  href="https://portal.valuemedic.co.za"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit the portal <ArrowUpRight size={15} />
+                </a>
+              </div>
               <span className="product-note">Built in Polokwane. Piloting with practices across Limpopo.</span>
             </motion.div>
           </div>
