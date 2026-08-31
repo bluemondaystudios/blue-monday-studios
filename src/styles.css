@@ -30,7 +30,7 @@ a { color: inherit; text-decoration: none; }
   outline-offset: 3px;
 }
 
-#services, #packages, #about, #contact {
+#services, #packages, #healthcare, #about, #contact {
   scroll-margin-top: 92px;
 }
 
@@ -338,6 +338,25 @@ a { color: inherit; text-decoration: none; }
 .package-note { text-align: center; margin-top: 28px; color: var(--muted); font-size: 13px; }
 .package-note a { color: var(--navy); font-weight: 700; }
 
+.healthcare-grid { margin-top: 55px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; align-items: start; }
+.pain-list-label { display: block; font: 700 10px "Space Grotesk", sans-serif; letter-spacing: .16em; color: var(--muted); margin-bottom: 6px; }
+.pain-row { display: grid; grid-template-columns: 32px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid var(--line); }
+.pain-row:last-child { border-bottom: 1px solid var(--line); }
+.pain-row > span { font: 700 11px "Space Grotesk", sans-serif; color: var(--navy-3); padding-top: 2px; }
+.pain-row b { display: block; font: 600 17px "Space Grotesk", sans-serif; letter-spacing: -.02em; }
+.pain-row p { margin: 6px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+.healthcare-product { background: var(--navy); color: white; padding: 40px 36px; }
+.product-top { display: flex; align-items: center; justify-content: space-between; }
+.product-top svg { color: var(--yellow); }
+.healthcare-product h3 { font: 700 34px "Space Grotesk", sans-serif; letter-spacing: -.04em; margin: 16px 0 14px; }
+.healthcare-product > p { color: #B9C7DA; line-height: 1.65; font-size: 15px; margin: 0 0 26px; }
+.product-items { display: grid; gap: 12px; margin-bottom: 30px; }
+.product-items div { display: flex; align-items: center; gap: 9px; font-size: 13px; }
+.product-items svg { color: var(--yellow); flex: 0 0 auto; }
+.healthcare-product .button { margin-top: 4px; }
+.product-note { display: block; margin-top: 18px; color: #7890B1; font-size: 11px; letter-spacing: .02em; }
+
 .future { background: var(--yellow); color: var(--navy); padding: 115px 24px; }
 .future-inner { width: min(var(--max), 100%); margin: auto; }
 .future h2 { max-width: 950px; font-size: clamp(47px, 6vw, 80px); line-height: .99; margin: 20px 0 55px; }
@@ -376,8 +395,8 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 900px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: inline-flex; }
-  #services, #packages, #about, #contact { scroll-margin-top: 78px; }
-  .hero-grid, .system-section, .about-grid, .contact-inner, .statement-inner { grid-template-columns: 1fr; }
+  #services, #packages, #healthcare, #about, #contact { scroll-margin-top: 78px; }
+  .hero-grid, .system-section, .about-grid, .contact-inner, .statement-inner, .healthcare-grid { grid-template-columns: 1fr; }
   .hero-grid { padding-top: 140px; gap: 45px; }
   .ecosystem-visual { height: 460px; }
   .statement-inner { gap: 40px; }
@@ -409,6 +428,8 @@ a { color: inherit; text-decoration: none; }
   .service-card { min-height: 270px; }
   .system-section, .contact { padding: 90px 16px; }
   .package { padding: 28px; }
+  .healthcare-grid { gap: 40px; }
+  .healthcare-product { padding: 30px 26px; }
   .future { padding: 90px 16px; }
   .about-card { min-height: 300px; }
   .footer { flex-direction: column; align-items: flex-start; padding: 32px 16px; }

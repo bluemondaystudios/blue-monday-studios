@@ -13,6 +13,7 @@ import {
   Palette,
   Search,
   Sparkles,
+  Stethoscope,
   X,
   Zap
 } from "lucide-react";
@@ -74,6 +75,42 @@ const packages = [
   }
 ];
 
+const practicePains = [
+  {
+    number: "01",
+    title: "Double-booked, again",
+    text: "Phone bookings and the diary don't check each other, so the same slot gets promised to two patients."
+  },
+  {
+    number: "02",
+    title: "No-shows nobody chased",
+    text: "A reminder call needs five spare minutes reception rarely has, so the slot just sits empty."
+  },
+  {
+    number: "03",
+    title: "Medical aid limbo",
+    text: "Confirming a patient's benefit eats up the phone line before they've even taken a seat."
+  },
+  {
+    number: "04",
+    title: "The message from last night",
+    text: "A patient messages at 9pm about tomorrow's slot. Nobody sees it until they're standing at the desk."
+  },
+  {
+    number: "05",
+    title: "One person holds it together",
+    text: "The bookings, the notes, the billing — if your practice manager is off sick, so is the practice's memory."
+  }
+];
+
+const valuemedicPoints = [
+  "One shared calendar that catches double-bookings before they happen",
+  "WhatsApp reminders and confirmations sent without reception lifting a phone",
+  "Medical aid and benefit checks run ahead of the appointment",
+  "After-hours messages logged and answered, not lost overnight",
+  "Patient records any staff member can find in seconds, not a filing cabinet"
+];
+
 function SectionHeading({ eyebrow, title, children, light = false }) {
   return (
     <div className={`section-heading ${light ? "light" : ""}`}>
@@ -132,6 +169,7 @@ function App() {
           <div className="nav-links">
             <a href="#services">Services</a>
             <a href="#packages">Packages</a>
+            <a href="#healthcare">Healthcare</a>
             <a href="#about">About</a>
           </div>
 
@@ -161,6 +199,7 @@ function App() {
             >
               <a href="#services" onClick={(e) => navigateTo(e, "services")}>Services</a>
               <a href="#packages" onClick={(e) => navigateTo(e, "packages")}>Packages</a>
+              <a href="#healthcare" onClick={(e) => navigateTo(e, "healthcare")}>Healthcare</a>
               <a href="#about" onClick={(e) => navigateTo(e, "about")}>About</a>
               <a href="#contact" className="mobile-menu-cta" onClick={(e) => navigateTo(e, "contact")}>
                 Start a project <ArrowUpRight size={16} />
@@ -384,6 +423,56 @@ function App() {
           <p className="package-note">Need something different? <a href="#contact">Tell us what your business needs.</a></p>
         </section>
 
+        <section className="healthcare section" id="healthcare">
+          <SectionHeading eyebrow="FOR SMALL HEALTHCARE PRACTICES" title="Most practices don't lose patients in the consulting room. They lose them at reception.">
+            GPs, dentists, physios and small clinics are run by two or three people juggling
+            bookings, medical aid queries and patient records on top of actual patient care.
+            ValueMedic is the system we're building to take that load off.
+          </SectionHeading>
+
+          <div className="healthcare-grid">
+            <div className="pain-list">
+              <span className="pain-list-label">A TYPICAL TUESDAY</span>
+              {practicePains.map((pain) => (
+                <div className="pain-row" key={pain.number}>
+                  <span>{pain.number}</span>
+                  <div>
+                    <b>{pain.title}</b>
+                    <p>{pain.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <motion.div
+              className="healthcare-product"
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="product-top">
+                <span className="eyebrow yellow">IN DEVELOPMENT</span>
+                <Stethoscope size={22} strokeWidth={1.8} />
+              </div>
+              <h3>ValueMedic</h3>
+              <p>
+                ValueMedic takes on the parts of running a practice that don't need a person
+                watching them, so reception can watch the people actually in the waiting room.
+              </p>
+              <div className="product-items">
+                {valuemedicPoints.map((point) => (
+                  <div key={point}><Check size={16} /> {point}</div>
+                ))}
+              </div>
+              <a className="button button-yellow" href="#contact">
+                Ask about ValueMedic <ArrowUpRight size={17} />
+              </a>
+              <span className="product-note">Built in Polokwane. Piloting with practices across Limpopo.</span>
+            </motion.div>
+          </div>
+        </section>
+
         <section className="future">
           <div className="future-inner">
             <span className="eyebrow">WHY THIS MATTERS</span>
@@ -449,6 +538,7 @@ function App() {
         <div className="footer-links">
           <a href="#services">Services</a>
           <a href="#packages">Packages</a>
+          <a href="#healthcare">Healthcare</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
