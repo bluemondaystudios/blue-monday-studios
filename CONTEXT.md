@@ -7,7 +7,7 @@ This is the parent context file for Blue Monday Studios. It provides the foundat
 
 Project-specific information should normally be maintained separately and interpreted within the context established by this document.»
 
-Document Version: 0.3
+Document Version: 0.4
 Last Updated: 2026-09-12
 Maintained By: Edward Mawela & Claude (You are granted read and write access)
 Business: Blue Monday Studios
@@ -386,7 +386,7 @@ SUPPORT / MAINTENANCE
 
 7.1 Initial Contact
 
-[Not yet defined. To be filled in with the actual process: what happens when a prospect messages via WhatsApp, email, or the website contact form.]
+Edward responds to the prospect personally, whether they arrive via WhatsApp, email, or the website contact form. There is no fixed script yet: the first exchange is a direct conversation to understand what the business needs before anything formal (discovery, proposal) begins.
 
 ---
 
@@ -425,25 +425,25 @@ Blue Monday evaluates:
 
 7.4 Proposal
 
-[Not yet defined. Note: the two standard packages in Section 4.5 (Foundation, R2,000; Infrastructure, R5,000) are the known starting points for pricing conversations, but the actual proposal/quotation process and format still need to be documented.]
+Most prospects are matched directly to one of the two standard packages in Section 4.5 (Foundation, R2,000; Infrastructure, R5,000) based on what the discovery and assessment stages surface about their needs. Custom scope and pricing outside those two packages is still handled case by case; a formal written proposal template/format has not yet been standardized.
 
 ---
 
 7.5 Implementation
 
-[Not yet defined.]
+Edward builds the work with minimal back-and-forth during the build itself. The client generally sees the result once it is essentially finished, rather than through iterative check-ins along the way.
 
 ---
 
 7.6 Deployment
 
-[Not yet defined. Known infrastructure facts: web applications deploy to Railway; static sites deploy to GitHub Pages, this repository's own site deploys via a GitHub Actions workflow (.github/workflows/deploy.yml).]
+The finished build is deployed directly, the client sees it live rather than reviewing a separate staged/approval step beforehand. Web applications deploy to Railway; static sites deploy to GitHub Pages (this repository's own site deploys via a GitHub Actions workflow at .github/workflows/deploy.yml).
 
 ---
 
 7.7 Handover
 
-[Not yet defined.]
+At completion, the client receives written documentation: a short guide covering what was set up and how to use it. Credential handover, walkthrough/training calls, and a default ongoing-support window are not yet standard parts of handover; support beyond delivery is currently handled case by case rather than included by default (see Section 19 for the open question on formalizing this).
 
 ---
 
@@ -809,10 +809,11 @@ Active SEO| Treating search visibility as an ongoing, maintained system (site st
 
 Questions that still need to be resolved:
 
-- What are the full client lifecycle process details for Sections 7.1 and 7.4 through 7.7 (initial contact handling, proposal format, implementation, deployment checklist, handover deliverables)?
 - Does the draft AI Data Handling Principles in Section 8.3 reflect actual policy, or does it need changes?
 - What document naming, formatting, and storage standards should Section 11 define?
 - When should setting up a Google Business Profile for Blue Monday Studios itself (Section 15) be prioritized, given it is a core service sold to clients?
+- Should a formal proposal template/format be adopted for custom-scope work outside the two standard packages (Section 7.4)?
+- Should a default post-handover support window be formalized (Section 7.7), or does support stay case by case as it is now?
 
 ---
 
@@ -835,6 +836,12 @@ Version 0.3
 Date: 2026-09-12
 
 Resolved several Version 0.2 open questions: social media (Instagram/Facebook/LinkedIn) confirmed as inactive and not currently a priority, Google Business Profile confirmed not yet set up for Blue Monday Studios itself and flagged as a gap, primary development environment set to VS Code, and valuemedic.co.za domain provider confirmed as domains.co.za. Remaining open questions narrowed to client lifecycle process detail, AI data handling policy confirmation, and document standards.
+
+Version 0.4
+
+Date: 2026-09-12
+
+Filled in the full client lifecycle (Sections 7.1, 7.4 through 7.7): initial contact is handled personally by Edward with no fixed script, proposals match prospects directly to the Foundation/Infrastructure packages, implementation is a solo build presented once finished, deployment goes live directly without a separate staged approval step, and handover currently consists of written documentation only. Added two new open questions surfaced by this pass: whether to formalize a proposal template for custom-scope work, and whether to formalize a default post-handover support window.
 
 ---
 
