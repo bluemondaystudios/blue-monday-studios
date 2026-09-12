@@ -7,7 +7,7 @@ This is the parent context file for Blue Monday Studios. It provides the foundat
 
 Project-specific information should normally be maintained separately and interpreted within the context established by this document.»
 
-Document Version: 0.4
+Document Version: 0.5
 Last Updated: 2026-09-12
 Maintained By: Edward Mawela & Claude (You are granted read and write access)
 Business: Blue Monday Studios
@@ -506,12 +506,13 @@ AI systems may be used to assist with:
 
 AI Data Handling Principles
 
-Proposed draft, needs Edward's confirmation:
+Confirmed policy:
 
-- Client passwords, API keys, tokens, and financial credentials are never shared with an AI system, in chat or in committed files.
-- Personal information about a client's own customers or patients (for example, patient records in a ValueMedic context) is not shared with general-purpose AI systems unless it is specifically required, scoped to the task, and permitted by the client's own data handling obligations.
-- Business content that is not sensitive (copy, structure, general requirements) can be shared freely to assist with development and documentation.
-- When in doubt about whether information is sensitive, treat it as sensitive.
+1. Client passwords, API keys, tokens, and financial credentials are never shared with an AI system, in chat or in committed files.
+2. Personal information about a client's own customers or patients (for example, patient records in a ValueMedic context) is not shared with general-purpose AI systems unless it is specifically required, scoped to the task, and permitted by the client's own data handling obligations.
+3. Business content that is not sensitive (copy, structure, general requirements) can be shared freely to assist with development and documentation.
+4. When in doubt about whether information is sensitive, treat it as sensitive.
+5. Any project that handles personal information, ValueMedic in particular, must comply with POPIA (the Protection of Personal Information Act, South Africa's data protection law). This is a baseline requirement at the parent level; each such project's own context should document the specific POPIA obligations that apply to it (lawful processing basis, patient consent handling, data retention, breach notification, and so on).
 
 ---
 
@@ -768,7 +769,7 @@ bluemondaystudios/blue-monday-studios (this repository)
 
 Project| Type| Client| Status| Notes
 Blue Monday Studios marketing site| Internal| Blue Monday Studios| Live| React + Vite, deployed via GitHub Pages
-ValueMedic| Internal product| N/A (Blue Monday product)| In development / piloting| CRM for small healthcare practices, piloting with practices in Limpopo, portal at portal.valuemedic.co.za
+ValueMedic| Internal product| N/A (Blue Monday product)| In development / piloting| CRM for small healthcare practices, piloting with practices in Limpopo, portal at portal.valuemedic.co.za. Handles patient personal information, must comply with POPIA (see Section 8.3).
 
 ---
 
@@ -809,7 +810,6 @@ Active SEO| Treating search visibility as an ongoing, maintained system (site st
 
 Questions that still need to be resolved:
 
-- Does the draft AI Data Handling Principles in Section 8.3 reflect actual policy, or does it need changes?
 - What document naming, formatting, and storage standards should Section 11 define?
 - When should setting up a Google Business Profile for Blue Monday Studios itself (Section 15) be prioritized, given it is a core service sold to clients?
 - Should a formal proposal template/format be adopted for custom-scope work outside the two standard packages (Section 7.4)?
@@ -842,6 +842,12 @@ Version 0.4
 Date: 2026-09-12
 
 Filled in the full client lifecycle (Sections 7.1, 7.4 through 7.7): initial contact is handled personally by Edward with no fixed script, proposals match prospects directly to the Foundation/Infrastructure packages, implementation is a solo build presented once finished, deployment goes live directly without a separate staged approval step, and handover currently consists of written documentation only. Added two new open questions surfaced by this pass: whether to formalize a proposal template for custom-scope work, and whether to formalize a default post-handover support window.
+
+Version 0.5
+
+Date: 2026-09-12
+
+Confirmed the AI Data Handling Principles (Section 8.3) as actual policy, previously a draft. Added a fifth principle requiring POPIA compliance for any project handling personal information, ValueMedic specifically, and cross-referenced this in the ValueMedic entry in Section 16.
 
 ---
 
