@@ -7,7 +7,7 @@ This is the parent context file for Blue Monday Studios. It provides the foundat
 
 Project-specific information should normally be maintained separately and interpreted within the context established by this document.»
 
-Document Version: 0.2
+Document Version: 0.3
 Last Updated: 2026-09-12
 Maintained By: Edward Mawela & Claude (You are granted read and write access)
 Business: Blue Monday Studios
@@ -341,13 +341,13 @@ Location:
 Polokwane, Limpopo, South Africa
 
 Instagram:
-Not yet active.
+Not active. Not currently a priority, focus remains on website, WhatsApp, and email.
 
 Facebook:
-Not yet active.
+Not active. Not currently a priority, focus remains on website, WhatsApp, and email.
 
 LinkedIn:
-Not yet active.
+Not active. Not currently a priority, focus remains on website, WhatsApp, and email.
 
 Other:
 [ ]
@@ -521,7 +521,7 @@ Proposed draft, needs Edward's confirmation:
 
 Domain| Purpose| Provider| Status
 bluemondaystudios.co.za| Main marketing site| domains.co.za| Active
-valuemedic.co.za / portal.valuemedic.co.za| ValueMedic product portal| Provider not confirmed| Active (product in development)
+valuemedic.co.za / portal.valuemedic.co.za| ValueMedic product portal| domains.co.za| Active (product in development)
 
 ---
 
@@ -543,7 +543,7 @@ GitHub Pages for static websites
 9.3 Development
 
 Primary development environment:
-[Not yet defined.]
+VS Code
 
 Code repositories:
 GitHub (this project: bluemondaystudios/blue-monday-studios)
@@ -748,16 +748,16 @@ Email:
 info@bluemondaystudios.co.za
 
 Google Business Profile:
-Not yet confirmed / to be added.
+Not set up yet. This is a notable gap since Google Business Profile setup is a core service Blue Monday sells to clients (Section 4.1); Blue Monday does not yet have its own listing.
 
 Instagram:
-Not yet active.
+Not active. Not currently a priority.
 
 Facebook:
-Not yet active.
+Not active. Not currently a priority.
 
 LinkedIn:
-Not yet active.
+Not active. Not currently a priority.
 
 GitHub:
 bluemondaystudios/blue-monday-studios (this repository)
@@ -810,12 +810,9 @@ Active SEO| Treating search visibility as an ongoing, maintained system (site st
 Questions that still need to be resolved:
 
 - What are the full client lifecycle process details for Sections 7.1 and 7.4 through 7.7 (initial contact handling, proposal format, implementation, deployment checklist, handover deliverables)?
-- Are Instagram, Facebook, and LinkedIn presences planned, and if so on what timeline?
-- What is the current status of a Google Business Profile for Blue Monday Studios itself?
 - Does the draft AI Data Handling Principles in Section 8.3 reflect actual policy, or does it need changes?
-- What is the primary local development environment/IDE?
-- Who is the registrar/provider for the valuemedic.co.za domain?
 - What document naming, formatting, and storage standards should Section 11 define?
+- When should setting up a Google Business Profile for Blue Monday Studios itself (Section 15) be prioritized, given it is a core service sold to clients?
 
 ---
 
@@ -832,6 +829,12 @@ Version 0.2
 Date: 2026-09-12
 
 Filled in company identity, positioning, services, packages/pricing, preferred technology stack, brand visual identity, and current business assets using the live marketing site source and founder input. Converted several blank placeholders into explicit open questions (Section 19) rather than leaving them ambiguous.
+
+Version 0.3
+
+Date: 2026-09-12
+
+Resolved several Version 0.2 open questions: social media (Instagram/Facebook/LinkedIn) confirmed as inactive and not currently a priority, Google Business Profile confirmed not yet set up for Blue Monday Studios itself and flagged as a gap, primary development environment set to VS Code, and valuemedic.co.za domain provider confirmed as domains.co.za. Remaining open questions narrowed to client lifecycle process detail, AI data handling policy confirmation, and document standards.
 
 ---
 
