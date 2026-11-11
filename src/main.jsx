@@ -62,14 +62,14 @@ const services = [
 const packages = [
   {
     label: "FOUNDATION",
-    price: "R2,000",
+    price: "R3,000",
     description: "Get the essential digital connections in place.",
     items: ["Digital business presence", "Customer communication setup", "Product/service presentation", "Core web experience"],
     featured: false
   },
   {
     label: "INFRASTRUCTURE",
-    price: "R5,000",
+    price: "R8,000",
     description: "Build a complete digital foundation for your business.",
     items: ["Meaningful business website", "Google Business setup", "WhatsApp Business setup", "Professional email", "Graphic design package", "Digital infrastructure support"],
     featured: true
