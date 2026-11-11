@@ -131,6 +131,15 @@ const team = [
     email: "admin@bluemondaystudios.co.za",
     phone: "081 403 5023",
     tel: "+27814035023"
+  },
+  {
+    name: "Ruben Saikho",
+    role: "Lead Graphic Designer",
+    blurb: "Grew Bars Music's Facebook page past 50,000 followers on the strength of consistent, self-designed graphic work — a sharp, confident eye for colour that makes every piece instantly his.",
+    photo: "/team/ruben-saikho.jpg",
+    email: "info@bluemondaystudios.co.za",
+    website: "barsgraphics.co.za",
+    websiteUrl: "https://www.barsgraphics.co.za"
   }
 ];
 
@@ -552,9 +561,9 @@ function App() {
 
         <section className="team-section section" id="team">
           <SectionHeading eyebrow="THE TEAM" title="Small team. Real names behind the work.">
-            Two people run every project end to end: one sets the technical direction and
-            signs off on what ships, the other keeps the day-to-day moving — support,
-            updates, admin — so nothing falls through the cracks.
+            Three people carry every project end to end: one sets the technical direction
+            and signs off on what ships, one keeps the day-to-day moving — support, updates,
+            admin — and one makes sure everything actually looks like it belongs together.
           </SectionHeading>
 
           <div className="team-grid">
