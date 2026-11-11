@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -153,49 +153,6 @@ function SectionHeading({ eyebrow, title, children, light = false }) {
   );
 }
 
-function AmbientLoop({ className }) {
-  const videoRef = useRef(null);
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    setEnabled(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  }, []);
-
-  useEffect(() => {
-    if (!enabled) return undefined;
-    const el = videoRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) el.play().catch(() => {});
-        else el.pause();
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [enabled]);
-
-  if (!enabled) return null;
-
-  return (
-    <>
-      <video
-        ref={videoRef}
-        className={`ambient-bg-video ${className}`}
-        src="/media/network-bg.mp4"
-        poster="/media/network-bg-poster.jpg"
-        muted
-        loop
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-      />
-      <div className={`ambient-bg-scrim ${className}-scrim`} aria-hidden="true" />
-    </>
-  );
-}
-
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -341,7 +298,6 @@ function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
             >
-              <AmbientLoop className="ecosystem-bg-video" />
               <div className="visual-label">YOUR BUSINESS / DIGITAL ECOSYSTEM</div>
               <div className="orbit orbit-a" />
               <div className="orbit orbit-b" />
@@ -651,6 +607,27 @@ function App() {
           </div>
         </section>
 
+        <section className="showcase section" id="design-work">
+          <div className="showcase-grid">
+            <SectionHeading eyebrow="IN-HOUSE GRAPHIC DESIGN WORK" title="Designed, animated and edited by our own team.">
+              A promotional reel Ruben put together for Blue Monday Studios itself — the
+              same eye for colour and motion he brings to every client project.
+            </SectionHeading>
+
+            <div className="showcase-video-wrap">
+              <video
+                className="showcase-video"
+                src="/media/graphic-design-reel.mp4"
+                poster="/media/graphic-design-reel-poster.jpg"
+                controls
+                playsInline
+                preload="metadata"
+              />
+              <span className="showcase-credit">Designed by Ruben Saikho, Lead Graphic Designer</span>
+            </div>
+          </div>
+        </section>
+
         <section className="contact" id="contact">
           <div className="contact-inner">
             <div>
@@ -672,7 +649,6 @@ function App() {
       </main>
 
       <footer className="footer">
-        <AmbientLoop className="footer-bg-video" />
         <div className="footer-brand">
           <span className="brand-mark">BM</span>
           <div><strong>BLUE MONDAY STUDIOS</strong><small>Digital infrastructure for small businesses.</small></div>
