@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -153,6 +153,49 @@ function SectionHeading({ eyebrow, title, children, light = false }) {
   );
 }
 
+function AmbientLoop({ className }) {
+  const videoRef = useRef(null);
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    setEnabled(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return undefined;
+    const el = videoRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) el.play().catch(() => {});
+        else el.pause();
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [enabled]);
+
+  if (!enabled) return null;
+
+  return (
+    <>
+      <video
+        ref={videoRef}
+        className={`ambient-bg-video ${className}`}
+        src="/media/network-bg.mp4"
+        poster="/media/network-bg-poster.jpg"
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+      <div className={`ambient-bg-scrim ${className}-scrim`} aria-hidden="true" />
+    </>
+  );
+}
+
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -298,6 +341,7 @@ function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
             >
+              <AmbientLoop className="ecosystem-bg-video" />
               <div className="visual-label">YOUR BUSINESS / DIGITAL ECOSYSTEM</div>
               <div className="orbit orbit-a" />
               <div className="orbit orbit-b" />
@@ -628,6 +672,7 @@ function App() {
       </main>
 
       <footer className="footer">
+        <AmbientLoop className="footer-bg-video" />
         <div className="footer-brand">
           <span className="brand-mark">BM</span>
           <div><strong>BLUE MONDAY STUDIOS</strong><small>Digital infrastructure for small businesses.</small></div>
