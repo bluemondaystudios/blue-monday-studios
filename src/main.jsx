@@ -11,6 +11,7 @@ import {
   Menu,
   MessageCircle,
   Palette,
+  Phone,
   Search,
   Sparkles,
   Stethoscope,
@@ -111,6 +112,17 @@ const valuemedicPoints = [
   "Every patient linked to their usual doctor, referrals and visit history — not just a name on a list"
 ];
 
+const team = [
+  {
+    name: "Itumeleng Randy Malau",
+    role: "Software Developer",
+    photo: "/team/itumeleng-malau.jpg",
+    email: "admin@bluemondaystudios.co.za",
+    phone: "081 403 5023",
+    tel: "+27814035023"
+  }
+];
+
 function SectionHeading({ eyebrow, title, children, light = false }) {
   return (
     <div className={`section-heading ${light ? "light" : ""}`}>
@@ -171,6 +183,7 @@ function App() {
             <a href="#packages">Packages</a>
             <a href="#healthcare">Healthcare</a>
             <a href="#about">About</a>
+            <a href="#team">Team</a>
           </div>
 
           <a className="nav-cta" href="#contact">
@@ -201,6 +214,7 @@ function App() {
               <a href="#packages" onClick={(e) => navigateTo(e, "packages")}>Packages</a>
               <a href="#healthcare" onClick={(e) => navigateTo(e, "healthcare")}>Healthcare</a>
               <a href="#about" onClick={(e) => navigateTo(e, "about")}>About</a>
+              <a href="#team" onClick={(e) => navigateTo(e, "team")}>Team</a>
               <a href="#contact" className="mobile-menu-cta" onClick={(e) => navigateTo(e, "contact")}>
                 Start a project <ArrowUpRight size={16} />
               </a>
@@ -525,6 +539,42 @@ function App() {
           </div>
         </section>
 
+        <section className="team-section section" id="team">
+          <SectionHeading eyebrow="THE TEAM" title="Small team. Real names behind the work.">
+            No call centre, no account managers relaying your request. The person building
+            your project is the person you'll actually talk to.
+          </SectionHeading>
+
+          <div className="team-grid">
+            {team.map((person) => (
+              <motion.article
+                className="team-card"
+                key={person.name}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.45 }}
+              >
+                <div className="team-photo">
+                  <img src={person.photo} alt={person.name} loading="lazy" />
+                </div>
+                <div className="team-info">
+                  <h3>{person.name}</h3>
+                  <span className="team-role">{person.role}</span>
+                  <div className="team-contact">
+                    <a href={`mailto:${person.email}`}>
+                      <Mail size={14} /> {person.email}
+                    </a>
+                    <a href={`tel:${person.tel}`}>
+                      <Phone size={14} /> {person.phone}
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </section>
+
         <section className="contact" id="contact">
           <div className="contact-inner">
             <div>
@@ -555,6 +605,7 @@ function App() {
           <a href="#packages">Packages</a>
           <a href="#healthcare">Healthcare</a>
           <a href="#about">About</a>
+          <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </div>
         <span className="copyright">© {new Date().getFullYear()} Blue Monday Studios</span>
