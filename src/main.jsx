@@ -609,9 +609,9 @@ function App() {
 
         <section className="showcase section" id="design-work">
           <div className="showcase-grid">
-            <SectionHeading eyebrow="IN-HOUSE GRAPHIC DESIGN WORK" title="Designed, animated and edited by our own team.">
-              A promotional reel Ruben put together for Blue Monday Studios itself — the
-              same eye for colour and motion he brings to every client project.
+            <SectionHeading eyebrow="IN-HOUSE GRAPHIC DESIGN WORK" title="Put together in-house, not outsourced.">
+              A promotional reel Edward curated for Blue Monday Studios itself — the same
+              studio that handles this kind of visual work for clients.
             </SectionHeading>
 
             <div className="showcase-video-wrap">
@@ -623,7 +623,7 @@ function App() {
                 playsInline
                 preload="metadata"
               />
-              <span className="showcase-credit">Designed by Ruben Saikho, Lead Graphic Designer</span>
+              <span className="showcase-credit">Curated by Edward Mawela, Founder & CTO</span>
             </div>
           </div>
         </section>
