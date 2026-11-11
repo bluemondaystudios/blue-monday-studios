@@ -114,8 +114,19 @@ const valuemedicPoints = [
 
 const team = [
   {
+    name: "Edward Mawela",
+    role: "Founder & CTO",
+    lead: true,
+    blurb: "Sets the technical direction and reviews every project before it ships.",
+    photo: "/team/edward-mawela.jpg",
+    email: "work@edwardmawela.tech",
+    website: "edwardmawela.tech",
+    websiteUrl: "https://www.edwardmawela.tech"
+  },
+  {
     name: "Itumeleng Randy Malau",
     role: "Software Developer",
+    blurb: "Your first point of contact for support and day-to-day project admin.",
     photo: "/team/itumeleng-malau.jpg",
     email: "admin@bluemondaystudios.co.za",
     phone: "081 403 5023",
@@ -541,14 +552,15 @@ function App() {
 
         <section className="team-section section" id="team">
           <SectionHeading eyebrow="THE TEAM" title="Small team. Real names behind the work.">
-            No call centre, no account managers relaying your request. The person building
-            your project is the person you'll actually talk to.
+            Two people run every project end to end: one sets the technical direction and
+            signs off on what ships, the other keeps the day-to-day moving — support,
+            updates, admin — so nothing falls through the cracks.
           </SectionHeading>
 
           <div className="team-grid">
             {team.map((person) => (
               <motion.article
-                className="team-card"
+                className={`team-card ${person.lead ? "team-card-lead" : ""}`}
                 key={person.name}
                 initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -559,15 +571,26 @@ function App() {
                   <img src={person.photo} alt={person.name} loading="lazy" />
                 </div>
                 <div className="team-info">
-                  <h3>{person.name}</h3>
+                  <div className="team-name-row">
+                    <h3>{person.name}</h3>
+                    {person.lead && <span className="team-lead-tag">LEADS ALL PROJECTS</span>}
+                  </div>
                   <span className="team-role">{person.role}</span>
+                  <p className="team-blurb">{person.blurb}</p>
                   <div className="team-contact">
                     <a href={`mailto:${person.email}`}>
-                      <Mail size={14} /> {person.email}
+                      <Mail size={14} /> <span>{person.email}</span>
                     </a>
-                    <a href={`tel:${person.tel}`}>
-                      <Phone size={14} /> {person.phone}
-                    </a>
+                    {person.phone && (
+                      <a href={`tel:${person.tel}`}>
+                        <Phone size={14} /> <span>{person.phone}</span>
+                      </a>
+                    )}
+                    {person.website && (
+                      <a href={person.websiteUrl} target="_blank" rel="noopener noreferrer">
+                        <Globe2 size={14} /> <span>{person.website}</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.article>
