@@ -329,31 +329,18 @@ function App() {
               transition={{ duration: 0.8, delay: 0.15 }}
             >
               <div className="visual-label">YOUR BUSINESS / DIGITAL ECOSYSTEM</div>
-              <div className="orbit orbit-a" />
-              <div className="orbit orbit-b" />
-              <div className="node node-google">
-                <Search size={18} />
-                <span>Google</span>
-              </div>
-              <div className="node node-whatsapp">
-                <MessageCircle size={18} />
-                <span>WhatsApp</span>
-              </div>
-              <div className="node node-email">
-                <Mail size={18} />
-                <span>Email</span>
-              </div>
-              <div className="node node-design">
-                <Palette size={18} />
-                <span>Brand</span>
-              </div>
-              <div className="node node-web">
-                <Globe2 size={18} />
-                <span>Website</span>
-              </div>
-              <div className="core">
-                <span>BM</span>
-                <small>BUSINESS<br />INFRASTRUCTURE</small>
+              <div className="chip-stage">
+                <img
+                  src="/brand/bm-chip-mark-on-dark.svg"
+                  width="509"
+                  height="333"
+                  alt="The Blue Monday chip at the centre of a circuit board, wired to five services"
+                />
+                <span className="chip-label chip-label-web">Website</span>
+                <span className="chip-label chip-label-google">Google</span>
+                <span className="chip-label chip-label-brand">Brand</span>
+                <span className="chip-label chip-label-whatsapp">WhatsApp</span>
+                <span className="chip-label chip-label-email">Email</span>
               </div>
             </motion.div>
           </div>
