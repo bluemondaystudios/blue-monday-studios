@@ -387,13 +387,13 @@ a { color: inherit; text-decoration: none; }
 .team-photo { width: 96px; height: 96px; flex: 0 0 auto; overflow: hidden; background: var(--navy); }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .team-info { min-width: 0; flex: 1 1 auto; }
-.team-info h3 { font: 700 20px "Space Grotesk", sans-serif; letter-spacing: -.02em; }
+.team-info h3 { font: 700 18px "Space Grotesk", sans-serif; letter-spacing: -.02em; }
 .team-role { display: block; font: 700 10px "Space Grotesk", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--navy-3); }
 .team-card-lead .team-role { color: var(--yellow); }
-.team-blurb { margin: 10px 0 16px; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+.team-blurb { margin: 10px 0 16px; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
 .team-card-lead .team-blurb { color: #B9C7DA; }
 .team-contact { display: grid; gap: 8px; min-width: 0; }
-.team-contact a { display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 12.5px; color: var(--muted); transition: color .2s; }
+.team-contact a { display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 11.5px; color: var(--muted); transition: color .2s; }
 .team-card-lead .team-contact a { color: #C7D3E4; }
 .team-contact a:hover { color: var(--navy); }
 .team-card-lead .team-contact a:hover { color: white; }
