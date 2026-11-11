@@ -176,40 +176,21 @@ a { color: inherit; text-decoration: none; }
 .ecosystem-visual {
   height: 530px;
   position: relative;
-  overflow: hidden;
   background: rgba(255,255,255,.035);
   border: 1px solid rgba(255,255,255,.12);
 }
-.ambient-bg-video {
-  position: absolute; inset: 0;
-  z-index: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  filter: brightness(.6) saturate(.6) blur(12px);
-}
-.ambient-bg-scrim {
-  position: absolute; inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: var(--navy);
-  opacity: .55;
-}
-@media (prefers-reduced-motion: reduce) {
-  .ambient-bg-video, .ambient-bg-scrim { display: none; }
-}
 .visual-label {
-  position: absolute; z-index: 1; top: 18px; left: 20px;
+  position: absolute; top: 18px; left: 20px;
   font-size: 9px; letter-spacing: .16em; color: #8394AE;
 }
 .orbit {
-  position: absolute; z-index: 1; inset: 90px 50px;
+  position: absolute; inset: 90px 50px;
   border: 1px solid rgba(255,255,255,.09);
   border-radius: 50%;
 }
 .orbit-b { inset: 150px 105px; border-color: rgba(255,211,61,.2); }
 .core {
-  position: absolute; z-index: 1; left: 50%; top: 50%;
+  position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%);
   width: 140px; height: 140px;
   background: var(--yellow);
@@ -222,7 +203,7 @@ a { color: inherit; text-decoration: none; }
 .core span { font: 700 31px "Space Grotesk"; margin-bottom: -22px; }
 .core small { font-size: 8px; font-weight: 700; letter-spacing: .12em; line-height: 1.3; }
 .node {
-  position: absolute; z-index: 1;
+  position: absolute;
   display: flex; align-items: center; gap: 8px;
   padding: 10px 13px;
   background: #0C2A55;
@@ -420,6 +401,17 @@ a { color: inherit; text-decoration: none; }
 .team-contact svg { color: var(--navy-3); flex: 0 0 auto; }
 .team-card-lead .team-contact svg { color: var(--yellow); }
 
+.showcase-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 60px; align-items: center; }
+.showcase-video-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.showcase-video {
+  width: 100%; max-width: 300px;
+  aspect-ratio: 9 / 16;
+  background: var(--navy);
+  border: 1px solid var(--line);
+  display: block;
+}
+.showcase-credit { font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+
 .contact { background: var(--navy-2); color: white; padding: 120px max(24px, calc((100% - var(--max)) / 2)); }
 .contact-inner { display: grid; grid-template-columns: 1.1fr .65fr; gap: 100px; align-items: end; }
 .contact h2 { font-size: clamp(52px, 6vw, 80px); line-height: .98; margin: 18px 0 0; }
@@ -429,15 +421,10 @@ a { color: inherit; text-decoration: none; }
 .contact-meta { display: grid; gap: 10px; margin-top: 32px; color: #8193AD; font-size: 11px; }
 .contact-meta span { display: flex; align-items: center; gap: 8px; }
 .footer {
-  position: relative;
-  overflow: hidden;
   background: #04132B; color: white;
   min-height: 120px; padding: 28px max(24px, calc((100% - var(--max)) / 2));
   display: flex; align-items: center; justify-content: space-between; gap: 30px;
 }
-.footer .ambient-bg-video { filter: brightness(.5) saturate(.5) blur(14px); }
-.footer .ambient-bg-scrim { background: #04132B; opacity: .62; }
-.footer-brand, .footer-links, .copyright { position: relative; z-index: 1; }
 .footer-brand { display: flex; align-items: center; gap: 11px; }
 .footer-brand strong { display: block; font: 700 12px "Space Grotesk"; letter-spacing: .08em; }
 .footer-brand small { display: block; color: #70839E; font-size: 9px; margin-top: 4px; }
@@ -449,7 +436,7 @@ a { color: inherit; text-decoration: none; }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: inline-flex; }
   #services, #packages, #healthcare, #about, #team, #contact { scroll-margin-top: 78px; }
-  .hero-grid, .system-section, .about-grid, .contact-inner, .statement-inner, .healthcare-grid { grid-template-columns: 1fr; }
+  .hero-grid, .system-section, .about-grid, .contact-inner, .statement-inner, .healthcare-grid, .showcase-grid { grid-template-columns: 1fr; }
   .hero-grid { padding-top: 140px; gap: 45px; }
   .ecosystem-visual { height: 460px; }
   .statement-inner { gap: 40px; }
