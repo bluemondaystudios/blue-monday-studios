@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -151,6 +151,36 @@ function SectionHeading({ eyebrow, title, children, light = false }) {
       {children && <p>{children}</p>}
     </div>
   );
+}
+
+// Browsers block autoplay-with-sound outright, so this starts muted the
+// instant the page loads, then unmutes itself on the visitor's first
+// click/tap/keypress anywhere on the page — the closest a browser allows
+// to "plays as soon as it lands, sound kicks in as they explore."
+function DesignReelVideo(props) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    video.muted = true;
+    video.play().catch(() => {});
+
+    const unmute = () => {
+      video.muted = false;
+      video.play().catch(() => {});
+    };
+    window.addEventListener("pointerdown", unmute, { once: true });
+    window.addEventListener("keydown", unmute, { once: true });
+
+    return () => {
+      window.removeEventListener("pointerdown", unmute);
+      window.removeEventListener("keydown", unmute);
+    };
+  }, []);
+
+  return <video ref={videoRef} {...props} />;
 }
 
 function App() {
@@ -615,13 +645,16 @@ function App() {
             </SectionHeading>
 
             <div className="showcase-video-wrap">
-              <video
+              <DesignReelVideo
                 className="showcase-video"
                 src="/media/graphic-design-reel.mp4"
                 poster="/media/graphic-design-reel-poster.jpg"
                 controls
+                loop
+                muted
+                autoPlay
                 playsInline
-                preload="metadata"
+                preload="auto"
               />
               <span className="showcase-credit">Curated by Edward Mawela, Founder & CTO</span>
             </div>
