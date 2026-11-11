@@ -13,8 +13,8 @@ import {
   Palette,
   Phone,
   Search,
-  Sparkles,
   Stethoscope,
+  Users,
   X,
   Zap
 } from "lucide-react";
@@ -532,7 +532,7 @@ function App() {
                 small businesses need practical ways to participate in the digital economy.
               </p>
               <div className="future-mark">
-                <Sparkles size={22} />
+                <Users size={22} />
                 <span>BUILT FOR<br />SMALL BUSINESSES</span>
               </div>
             </div>
