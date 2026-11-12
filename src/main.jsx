@@ -330,12 +330,16 @@ function App() {
             >
               <div className="visual-label">YOUR BUSINESS / DIGITAL ECOSYSTEM</div>
               <div className="chip-stage">
-                <img
-                  src="/brand/bm-chip-mark-on-dark.svg"
-                  width="509"
-                  height="333"
-                  alt="The Blue Monday chip at the centre of a circuit board, wired to five services"
-                />
+                {/* The animated file can't see the visitor's reduced-motion setting, so the still one is swapped in here. */}
+                <picture>
+                  <source media="(prefers-reduced-motion: reduce)" srcSet="/brand/bm-chip-mark-on-dark.svg" />
+                  <img
+                    src="/brand/bm-chip-mark-animated.svg"
+                    width="509"
+                    height="333"
+                    alt="The Blue Monday chip at the centre of a circuit board, wired to five services"
+                  />
+                </picture>
                 <span className="chip-label chip-label-web">Website</span>
                 <span className="chip-label chip-label-google">Google</span>
                 <span className="chip-label chip-label-brand">Brand</span>

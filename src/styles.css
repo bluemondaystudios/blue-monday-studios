@@ -184,6 +184,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 9px; letter-spacing: .16em; color: #8394AE;
 }
 .chip-stage { position: relative; }
+.chip-stage picture { display: block; }
 .chip-stage img { display: block; width: 100%; height: auto; }
 /* Each label is pinned to its tile's position in the artwork, as a share of the image box. */
 .chip-label {
